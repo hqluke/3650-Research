@@ -10,6 +10,7 @@ This repo is the documentation trail for my CS 3650 research project. It has my 
 | --- | --- |
 | `reference/` | Study sheets on the methods and standards I'm auditing against |
 | `phase-1/` | Phase 1: Contextual Research & Diagnostic Usability Audit (due Oct 9, 2026) |
+| `experiment_design/` | Lab 04: Experiment Design & Variable Formulation Plan (due Nov 6, 2026) |
 
 Inside `phase-1/`:
 
@@ -26,3 +27,13 @@ Inside `phase-1/`:
 | `Phase1_Usability_Audit.md` | Source for the report |
 | `Phase1_Usability_Audit.pdf` | The report I submit, built from the markdown with `build_pdf.py` |
 | `build_pdf.py` | Builds the accessible (PDF/UA-1) PDF. Needs `pip install markdown pikepdf` and Chrome |
+
+Inside `experiment_design/`:
+
+| Path | What's in it |
+| --- | --- |
+| `Lab04_Experiment_Plan.md` | Source for the plan. A between-subjects study comparing ForeUp to my Case Study 02 prototype |
+| `Lab04_Experiment_Plan.pdf` | The plan I submit, built from the markdown with `build_pdf.py` |
+| `data_dictionary.csv` | Every variable in the study, its type, allowed values, and how it's measured |
+| `session_sheet.csv` | Blank data collection sheet, one row per participant per task |
+| `build_pdf.py` | Same accessible PDF build as Phase 1. Needs `pip install markdown pikepdf` and Chrome |

@@ -1,0 +1,18 @@
+Variable,Role,Type,Unit or values,Recorded,How it's measured
+Participant_ID,ID,Text,P01-P12,Once,Code given at sign-up. No names anywhere
+Session_Date,Control,Date,YYYY-MM-DD,Once,Date of the session
+Session_Start,Control,Time,HH:MM,Once,Start time. Every session has to end before 8:45 PM
+Experience_Group,Blocking,Category,New / Other sites / ForeUp,Once,"Screening question. New = never booked a tee time online, Other sites = booked online but not on ForeUp at Davis Park or Valley View, ForeUp = booked on ForeUp at either course"
+Condition,Independent,Category,A (ForeUp) / B (prototype),Once,Slip drawn from that experience group's envelope at sign-up
+Task_ID,Within session,Category,T1 / T2 / T3,Per task,"T1 = earliest 9 hole time for 2 after 12 PM, T2 = earliest 18 hole time for 4 after 2 PM, T3 = cancellation 90 minutes out"
+Answer_Key,Control,Text,Course and time,Per task,Right answer checked on that interface right before the session
+Participant_Answer,Raw,Text,Course and time or free text,Per task,What they said or the time they picked
+Task_Completion_Time_sec,Dependent (efficiency),Integer,0-180 seconds,T1 and T2,From first mouse touch after the task is read to saying the answer or reaching the payment or login step. Taken from the screen recording. 180 = cap and counts as a fail
+Task_Success_Binary,Dependent (effectiveness),Binary,0 / 1,Per task,"1 = answer matches the key with no hint and under 180 s, 0 = anything else"
+Lost_Time_Binary,Dependent (effectiveness),Binary,0 / 1,T1 and T2,"1 = said nothing matches when the key shows a time, or picked a later time when an earlier one existed"
+Error_Count_Total,Dependent (effectiveness),Integer,0+,T1 and T2,"Count of wrong class, wrong date, wrong course, wrong player count, and empty lists they ran into"
+Rules_Correct_Score,Dependent (effectiveness),Integer,0-2,T3,1 point per course they get right
+SEQ_Rating,Dependent (satisfaction),Integer,1-7,Per task,"""Overall, how easy or hard was that, from 1 (very hard) to 7 (very easy)?"""
+Confidence_Rating,Secondary,Integer,1-5,Per task,"""How sure are you that your answer is right, from 1 to 5?"" Not tied to a hypothesis"
+Hint_Given,Raw,Binary,0 / 1,Per task,1 if I gave a hint after 3 minutes or they said they'd give up
+Notes,Raw,Text,Free text,Per task,"What they said after the task, anything odd"
