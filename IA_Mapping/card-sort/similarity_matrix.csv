@@ -1,0 +1,19 @@
+Card,13,17,1,2,3,4,5,6,7,8,9,10,11,14,16,18,12,15
+13. Cancel a tee time,3,3,2,2,2,2,2,2,2,2,2,0,0,1,1,1,2,1
+17. Find the last tee time before sunset,3,3,2,2,2,2,2,2,2,2,2,0,0,1,1,1,2,1
+1. Pick a date,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+2. Choose 9 or 18 holes,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+3. Choose how many players,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+"4. Choose morning, afternoon, or evening",2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+5. Pick Davis Park or Valley View,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+6. See open tee times at both courses,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+7. Book as a single golfer,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+8. Choose a cart or walking,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+9. Pay for your group,2,2,3,3,3,3,3,3,3,3,3,1,1,0,0,0,1,0
+10. Log in or create an account,0,0,1,1,1,1,1,1,1,1,1,3,2,0,0,2,1,1
+11. Use a season pass,0,0,1,1,1,1,1,1,1,1,1,2,3,1,1,1,1,2
+14. Read the cancellation policy,1,1,0,0,0,0,0,0,0,0,0,0,1,3,3,1,1,2
+16. See why there are no tee times,1,1,0,0,0,0,0,0,0,0,0,0,1,3,3,1,1,2
+18. Get your confirmation email,1,1,0,0,0,0,0,0,0,0,0,2,1,1,1,3,2,2
+12. See your upcoming tee times,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3,2
+15. See when new days open for booking,1,1,0,0,0,0,0,0,0,0,0,1,2,2,2,2,2,3

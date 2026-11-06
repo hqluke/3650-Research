@@ -1,0 +1,32 @@
+%% Revised sitemap, two levels deep. Card numbers come from the card sort deck
+%% (card-sort/protocol.md). Contextual links are listed in the report, not drawn.
+flowchart TD
+    H["Davis County Golf<br>global header on every page"]
+    H --> P1["Book a tee time<br><i>primary</i>"]
+    H --> P2["My tee times<br><i>primary</i>"]
+    H --> P3["Rules and policies<br><i>primary</i>"]
+    H --> U1["Sign in / Account<br><i>utility</i>"]
+
+    P1 --> BS
+    subgraph BS["Booking steps, local nav"]
+        direction TB
+        F["1. Find a time<br>both courses on one page<br>cards 1-7, 15, 16, 17"] --> R["2. Review and pay<br>cards 8, 9, 11"] --> C["3. Confirmed<br>card 18"]
+    end
+
+    P2 --> M["Upcoming and past tee times<br>both courses in one list<br>cards 12, 18"]
+    P2 --> X["Cancel a tee time<br>cards 13, 14"]
+
+    P3 --> RP["One page, local nav to five sections:<br>when new days open<br>why there are no tee times<br>last tee time of the day<br>cancellations<br>season passes<br>cards 11, 14, 15, 16, 17"]
+
+    U1 --> S["Sign in or create an account<br>one account for both courses<br>card 10"]
+    U1 --> A["Account<br>season pass, rain checks<br>card 11"]
+
+    classDef primary fill:#333,color:#fff,stroke:#333
+    classDef utility fill:#fff,color:#1f1f1f,stroke:#333,stroke-dasharray:4 3
+    classDef page fill:#f2f2f2,color:#1f1f1f,stroke:#767676
+    classDef root fill:#fff,color:#1f1f1f,stroke:#333,stroke-width:2px
+    class H root
+    class P1,P2,P3 primary
+    class U1 utility
+    class F,R,C,M,X,RP,S,A page
+    style BS fill:#fff,stroke:#767676,stroke-dasharray:4 3

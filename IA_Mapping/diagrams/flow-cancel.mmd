@@ -1,0 +1,19 @@
+%% Flow 2: cancel a tee time and know what you'll get back (Phase 1 task T5)
+flowchart TD
+    A1([Main nav: My tee times]) --> S
+    A2([Confirmed page or<br>confirmation email link]) --> S
+    S{Signed in?} -->|no| SI["Sign in<br>returns to My tee times"]
+    SI --> M
+    S -->|yes| M["My tee times<br>both courses in one list<br>each one says what you'd get back now"]
+    M -->|Past tee times| PT["List expands<br>aria-expanded true"]
+    M -->|Cancel on one tee time| X["Cancel screen<br>focus on heading<br>'If you cancel now, you get ...'<br>policy table with the current tier marked"]
+    X -->|Compare both courses| RP["Rules and policies<br>cancellations section"]
+    X -->|Keep my tee time| M
+    X -->|Cancel and get ...| Q{{Cancelling}}
+    Q -->|goes through| D["Cancelled<br>focus on heading<br>refund or rain check amount, email sent"]
+    Q -->|a deadline passed<br>while the page was open| T["Alert: the amount changed<br>shows the new amount<br>asks again"]
+    T --> X
+    Q -->|connection drops| N["Alert: still booked<br>Try again"]
+    N --> Q
+    D -->|Back to my tee times| M
+    D -->|Book a tee time| B([Flow 1])

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cancel a Tee Time - Davis County Golf (Wireframe)</title>
+  <link rel="stylesheet" href="wire.css">
+  <script type="module" src="wire.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <p class="site-title"><a href="01-find-a-time.html">Davis County Golf</a></p>
+    <button type="button" class="btn menu-toggle" aria-expanded="false" aria-controls="nav-main nav-account">Menu</button>
+    <nav id="nav-main" aria-label="Main">
+      <ul>
+        <li><a href="01-find-a-time.html">Book a tee time</a></li>
+        <li><a href="06-my-tee-times.html" aria-current="page">My tee times</a></li>
+        <li><a href="09-rules-and-policies.html">Rules and policies</a></li>
+      </ul>
+    </nav>
+    <nav id="nav-account" class="nav-utility" aria-label="Account">
+      <ul><li><a href="#account">Luke P.</a></li></ul>
+    </nav>
+  </header>
+  <div class="page single">
+    <main id="main">
+      <p><a href="06-my-tee-times.html">Back to my tee times</a></p>
+      <h1 id="page-heading" tabindex="-1" data-focus-on-load>Cancel your tee time?</h1>
+      <dl class="details box">
+        <dt>Course</dt><dd>Davis Park, Fruit Heights</dd>
+        <dt>When</dt><dd>Today, Friday, November 6 at 11:00 AM (in 1 hour 30 minutes)</dd>
+        <dt>Booking</dt><dd>1 player, 9 holes, walking</dd>
+        <dt>Paid</dt><dd>$18.00</dd>
+      </dl>
+      <div class="box strong" aria-labelledby="get-heading" role="group">
+        <h2 id="get-heading">If you cancel now, you get a rain check for $18.00</h2>
+        <p>The full refund ended last night at 11:00 PM. At 10:00 AM this drops to a $9.00 rain check.</p>
+      </div>
+      <table>
+        <caption class="hint" style="text-align:left">Davis Park's cancellation policy for this tee time</caption>
+        <thead><tr><th scope="col">If you cancel</th><th scope="col">You get</th></tr></thead>
+        <tbody>
+          <tr><td>Before Thu 11:00 PM</td><td>Full refund</td></tr>
+          <tr class="now"><td>Thu 11:00 PM to Fri 10:00 AM <strong>(now)</strong></td><td>Rain check for the full amount</td></tr>
+          <tr><td>After Fri 10:00 AM</td><td>Rain check for 50%</td></tr>
+        </tbody>
+      </table>
+      <p class="hint">Valley View's rules are different. <a href="09-rules-and-policies.html#cancellations">Compare both courses</a></p>
+      <div class="actions">
+        <button type="button" class="btn btn-primary">Cancel and get an $18.00 rain check</button>
+        <a class="btn" href="06-my-tee-times.html">Keep my tee time</a>
+      </div>
+      <div role="alert" id="cancel-alert"></div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p>Wireframe for CS 3650 Phase 2, with sample tee times. Not affiliated with Davis County or ForeUp.</p>
+  </footer>
+</body>
+</html>

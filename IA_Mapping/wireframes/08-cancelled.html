@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tee Time Cancelled - Davis County Golf (Wireframe)</title>
+  <link rel="stylesheet" href="wire.css">
+  <script type="module" src="wire.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <p class="site-title"><a href="01-find-a-time.html">Davis County Golf</a></p>
+    <button type="button" class="btn menu-toggle" aria-expanded="false" aria-controls="nav-main nav-account">Menu</button>
+    <nav id="nav-main" aria-label="Main">
+      <ul>
+        <li><a href="01-find-a-time.html">Book a tee time</a></li>
+        <li><a href="06-my-tee-times.html" aria-current="page">My tee times</a></li>
+        <li><a href="09-rules-and-policies.html">Rules and policies</a></li>
+      </ul>
+    </nav>
+    <nav id="nav-account" class="nav-utility" aria-label="Account">
+      <ul><li><a href="#account">Luke P.</a></li></ul>
+    </nav>
+  </header>
+  <div class="page single">
+    <main id="main">
+      <h1 id="page-heading" tabindex="-1" data-focus-on-load>Tee time cancelled</h1>
+      <p>Davis Park, today at 11:00 AM is cancelled, and the spot is open for someone else.</p>
+      <p class="notice">You have an <strong>$18.00 rain check</strong>. It's in your account and in an email to luke@example.com, and it shows up at checkout the next time you book.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="06-my-tee-times.html">Back to my tee times</a>
+        <a class="btn" href="01-find-a-time.html">Book a tee time</a>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p>Wireframe for CS 3650 Phase 2, with sample tee times. Not affiliated with Davis County or ForeUp.</p>
+  </footer>
+</body>
+</html>

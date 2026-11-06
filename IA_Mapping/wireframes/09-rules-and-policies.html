@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rules and Policies - Davis County Golf (Wireframe)</title>
+  <link rel="stylesheet" href="wire.css">
+  <script type="module" src="wire.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <p class="site-title"><a href="01-find-a-time.html">Davis County Golf</a></p>
+    <button type="button" class="btn menu-toggle" aria-expanded="false" aria-controls="nav-main nav-account">Menu</button>
+    <nav id="nav-main" aria-label="Main">
+      <ul>
+        <li><a href="01-find-a-time.html">Book a tee time</a></li>
+        <li><a href="06-my-tee-times.html">My tee times</a></li>
+        <li><a href="09-rules-and-policies.html" aria-current="page">Rules and policies</a></li>
+      </ul>
+    </nav>
+    <nav id="nav-account" class="nav-utility" aria-label="Account">
+      <ul><li><a href="03-sign-in.html">Sign in</a></li></ul>
+    </nav>
+  </header>
+  <div class="page">
+    <main id="main">
+      <h1 id="page-heading" tabindex="-1">Rules and policies</h1>
+      <p>These are the same at both courses unless the table says otherwise.</p>
+      <section id="booking-window" aria-labelledby="h-window">
+        <h2 id="h-window">When new days open</h2>
+        <table>
+          <thead><tr><th scope="col">Who</th><th scope="col">How far ahead</th></tr></thead>
+          <tbody>
+            <tr><td>2 or more players, 18 holes</td><td>4 days, counting today</td></tr>
+            <tr><td>Everyone else</td><td>3 days, counting today</td></tr>
+          </tbody>
+        </table>
+        <p>Each new day opens at 9 PM.</p>
+      </section>
+      <section id="no-times" aria-labelledby="h-none">
+        <h2 id="h-none">Why you might not see tee times</h2>
+        <ul>
+          <li>The day isn't open yet for your group size.</li>
+          <li>Every time that matches your filters is booked.</li>
+          <li>It's past the last tee time of the day.</li>
+        </ul>
+        <p>The tee time list always tells you which one it is.</p>
+      </section>
+      <section id="sunset" aria-labelledby="h-sunset">
+        <h2 id="h-sunset">Last tee time of the day</h2>
+        <p>The list ends 100 minutes before sunset so every group can finish before dark.</p>
+      </section>
+      <section id="cancellations" aria-labelledby="h-cancel">
+        <h2 id="h-cancel">Cancellations</h2>
+        <table>
+          <thead><tr><th scope="col">If you cancel</th><th scope="col">Davis Park</th><th scope="col">Valley View</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">12 or more hours before</th><td>Full refund</td><td>Full refund</td></tr>
+            <tr><th scope="row">2 to 12 hours before</th><td>Rain check, full amount</td><td>Rain check, full amount</td></tr>
+            <tr><th scope="row">1 to 2 hours before</th><td>Rain check, full amount</td><td>Nothing back</td></tr>
+            <tr><th scope="row">Under 1 hour</th><td>Rain check, 50%</td><td>Nothing back</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="season-passes" aria-labelledby="h-pass">
+        <h2 id="h-pass">Season passes</h2>
+        <p>Sign in and check "Use my season pass" when you pay.</p>
+      </section>
+    </main>
+    <aside>
+      <nav aria-label="On this page">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#booking-window">When new days open</a></li>
+          <li><a href="#no-times">Why you might not see tee times</a></li>
+          <li><a href="#sunset">Last tee time of the day</a></li>
+          <li><a href="#cancellations">Cancellations</a></li>
+          <li><a href="#season-passes">Season passes</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p>Wireframe for CS 3650 Phase 2, with sample tee times. Not affiliated with Davis County or ForeUp.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Tee Time - Davis County Golf (Wireframe)</title>
+  <link rel="stylesheet" href="wire.css">
+  <script type="module" src="wire.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <p class="site-title"><a href="01-find-a-time.html">Davis County Golf</a></p>
+    <button type="button" class="btn menu-toggle" aria-expanded="false" aria-controls="nav-main nav-account">Menu</button>
+    <nav id="nav-main" aria-label="Main">
+      <ul>
+        <li><a href="01-find-a-time.html" aria-current="page">Book a tee time</a></li>
+        <li><a href="06-my-tee-times.html">My tee times</a></li>
+        <li><a href="09-rules-and-policies.html">Rules and policies</a></li>
+      </ul>
+    </nav>
+    <nav id="nav-account" class="nav-utility" aria-label="Account">
+      <ul><li><a href="03-sign-in.html">Sign in</a></li></ul>
+    </nav>
+  </header>
+  <nav class="steps" aria-label="Booking steps">
+    <ol>
+      <li aria-current="step"><span class="step-num">1</span> Find a time</li>
+      <li><span class="step-num">2</span> Review and pay</li>
+      <li><span class="step-num">3</span> Confirmed</li>
+    </ol>
+  </nav>
+  <div class="page">
+    <main id="main">
+      <h1 id="page-heading" tabindex="-1">Find a tee time</h1>
+      <p>Davis Park and Valley View on one page. One account works at both.</p>
+      <form>
+        <fieldset>
+          <legend>Date</legend>
+          <div class="chips">
+              <label class="chip"><input type="radio" name="date" value="2026-11-06"> Fri, Nov 6</label>
+              <label class="chip"><input type="radio" name="date" value="2026-11-07"> Sat, Nov 7</label>
+              <label class="chip"><input type="radio" name="date" value="2026-11-08"> Sun, Nov 8</label>
+              <label class="chip on"><input type="radio" name="date" value="2026-11-09" checked> Mon, Nov 9</label>
+              <label class="chip"><input type="radio" name="date" value="2026-11-10"> Tue, Nov 10</label>
+          </div>
+        </fieldset>
+        <button type="button" class="btn filters-toggle" aria-expanded="false" aria-controls="filters">Filters: 2 courses, 18 holes, 1 player, any time</button>
+        <div id="filters" class="filters">
+          <fieldset>
+            <legend>Courses</legend>
+            <div class="chips">
+              <label class="chip on"><input type="checkbox" name="course" value="dp" checked> Davis Park <small>Fruit Heights</small></label>
+              <label class="chip on"><input type="checkbox" name="course" value="vv" checked> Valley View <small>Layton</small></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Holes</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="holes" value="9"> 9 holes</label>
+              <label class="chip on"><input type="radio" name="holes" value="18" checked> 18 holes</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Players</legend>
+            <div class="chips">
+              <label class="chip on"><input type="radio" name="players" value="1" checked> 1</label>
+              <label class="chip"><input type="radio" name="players" value="2"> 2</label>
+              <label class="chip"><input type="radio" name="players" value="3"> 3</label>
+              <label class="chip"><input type="radio" name="players" value="4"> 4</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Time of day</legend>
+            <div class="chips">
+              <label class="chip on"><input type="radio" name="tod" value="any" checked> Any time</label>
+              <label class="chip"><input type="radio" name="tod" value="morning"> Morning</label>
+              <label class="chip"><input type="radio" name="tod" value="midday"> Midday</label>
+              <label class="chip"><input type="radio" name="tod" value="afternoon"> Afternoon</label>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+      <section aria-labelledby="results-heading">
+        <div class="results-head">
+          <h2 id="results-heading">Tee times on Mon, Nov 9</h2>
+          <p id="results-status" role="status">No tee times yet. Mon, Nov 9 opens for 1 player on Sat, Nov 7 at 9 PM.</p>
+        </div>
+        <div class="box strong">
+          <h3>Mon, Nov 9 isn't open for 1 player yet</h3>
+          <p>Single golfers can book 3 days ahead, counting today, so this day opens for you on <strong>Sat, Nov 7 at 9 PM</strong>. Groups of 2 or more playing 18 holes can book it now.</p>
+          <div class="actions">
+            <button type="button" class="btn btn-primary">Show Sun, Nov 8 for 1 player</button>
+            <button type="button" class="btn">Show Mon, Nov 9 for 2 players</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside aria-label="Booking rules">
+      <section aria-labelledby="window-heading">
+        <h2 id="window-heading">When days open</h2>
+        <p>Groups of 2 or more playing 18 holes can book 4 days ahead, counting today. Everyone else can book 3. Each new day opens at 9 PM.</p>
+      </section>
+      <section aria-labelledby="sunset-heading">
+        <h2 id="sunset-heading">Why the list ends early</h2>
+        <p>The last tee time is 100 minutes before sunset, so every group can finish before dark.</p>
+      </section>
+      <p><a href="09-rules-and-policies.html">All rules and policies</a></p>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p>Wireframe for CS 3650 Phase 2, with sample tee times. Not affiliated with Davis County or ForeUp.</p>
+  </footer>
+</body>
+</html>

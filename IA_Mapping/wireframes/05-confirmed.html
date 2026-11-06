@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmed - Davis County Golf (Wireframe)</title>
+  <link rel="stylesheet" href="wire.css">
+  <script type="module" src="wire.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <p class="site-title"><a href="01-find-a-time.html">Davis County Golf</a></p>
+    <button type="button" class="btn menu-toggle" aria-expanded="false" aria-controls="nav-main nav-account">Menu</button>
+    <nav id="nav-main" aria-label="Main">
+      <ul>
+        <li><a href="01-find-a-time.html" aria-current="page">Book a tee time</a></li>
+        <li><a href="06-my-tee-times.html">My tee times</a></li>
+        <li><a href="09-rules-and-policies.html">Rules and policies</a></li>
+      </ul>
+    </nav>
+    <nav id="nav-account" class="nav-utility" aria-label="Account">
+      <ul><li><a href="#account">Luke P.</a></li></ul>
+    </nav>
+  </header>
+  <nav class="steps" aria-label="Booking steps">
+    <ol>
+      <li><span class="step-num">1</span> Find a time</li>
+      <li><span class="step-num">2</span> Review and pay</li>
+      <li aria-current="step"><span class="step-num">3</span> Confirmed</li>
+    </ol>
+  </nav>
+  <div class="page">
+    <main id="main">
+      <h1 id="page-heading" tabindex="-1" data-focus-on-load>You're booked</h1>
+      <p>Confirmation <strong>VV-48213</strong>. We emailed it to luke@example.com.</p>
+      <dl class="details box">
+        <dt>Course</dt><dd>Valley View, Layton</dd>
+        <dt>When</dt><dd>Saturday, November 7 at 10:20 AM</dd>
+        <dt>Holes</dt><dd>18, with a cart</dd>
+        <dt>Players</dt><dd>2</dd>
+        <dt>Paid</dt><dd>$104.00</dd>
+      </dl>
+      <p class="notice">Cancel before <strong>Fri 10:20 PM</strong> for a full refund.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="06-my-tee-times.html">See my tee times</a>
+        <a class="btn" href="01-find-a-time.html">Book another tee time</a>
+      </div>
+    </main>
+    <aside aria-labelledby="policy-heading">
+      <h2 id="policy-heading">If plans change</h2>
+          <table>
+            <thead><tr><th scope="col">If you cancel</th><th scope="col">You get</th></tr></thead>
+            <tbody>
+              <tr><td>Before Fri 10:20 PM</td><td>Full refund</td></tr>
+              <tr><td>Fri 10:20 PM to Sat 8:20 AM</td><td>Rain check for the full amount</td></tr>
+              <tr><td>After Sat 8:20 AM, or no-show</td><td>Nothing back</td></tr>
+            </tbody>
+          </table>
+      <p>You can cancel any time from <a href="06-my-tee-times.html">My tee times</a>.</p>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p>Wireframe for CS 3650 Phase 2, with sample tee times. Not affiliated with Davis County or ForeUp.</p>
+  </footer>
+</body>
+</html>

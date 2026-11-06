@@ -1,0 +1,27 @@
+%% Flow 1: find and book a tee time at either course (Phase 1 tasks T1-T3)
+flowchart TD
+    A([Open the site]) --> F["Find a time<br>both courses, first open day,<br>last search remembered"]
+    F -->|change date, course, holes,<br>players, or time of day| Q{Any times match?}
+    Q -->|yes| L["List of tee times<br>status: count per course<br>last tee time and sunset noted"]
+    Q -->|no| W{Why not?}
+    W -->|day not open yet<br>for this group size| E1["Empty state: when it opens<br>offers the nearest open day<br>and a group size that's open now"]
+    W -->|every time is booked| E2["Empty state: sold out<br>offers the other course<br>and the next day with times"]
+    W -->|past the last tee time| E3["Empty state: list ends<br>100 min before sunset<br>offers tomorrow"]
+    E1 & E2 & E3 -->|pick a suggestion| Q
+    L -->|pick a tee time| S{Signed in?}
+    S -->|no| SI["Sign in<br>time held 10 minutes"]
+    SI -->|wrong email or password| SE["Inline error, announced<br>focus stays in the form"]
+    SE --> SI
+    SI -->|signed in| R
+    S -->|yes| R["Review and pay<br>focus on heading<br>this course's cancellation policy beside it"]
+    R -->|change cart or season pass| T["Total updates<br>announced politely"]
+    T --> R
+    R -->|Back to tee times| L
+    R -->|Pay| P{{Processing<br>button locked}}
+    P -->|goes through| C["Confirmed<br>focus on heading, email sent<br>full refund deadline shown"]
+    P -->|someone took the time| X1["Alert: not charged<br>pick another time"]
+    X1 --> L
+    P -->|connection drops| X2["Alert: not charged<br>Try again keeps details"]
+    X2 --> P
+    C -->|See my tee times| M([Flow 2])
+    C -->|Book another tee time| F

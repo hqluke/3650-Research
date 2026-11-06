@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Tee Times - Davis County Golf (Wireframe)</title>
+  <link rel="stylesheet" href="wire.css">
+  <script type="module" src="wire.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <p class="site-title"><a href="01-find-a-time.html">Davis County Golf</a></p>
+    <button type="button" class="btn menu-toggle" aria-expanded="false" aria-controls="nav-main nav-account">Menu</button>
+    <nav id="nav-main" aria-label="Main">
+      <ul>
+        <li><a href="01-find-a-time.html">Book a tee time</a></li>
+        <li><a href="06-my-tee-times.html" aria-current="page">My tee times</a></li>
+        <li><a href="09-rules-and-policies.html">Rules and policies</a></li>
+      </ul>
+    </nav>
+    <nav id="nav-account" class="nav-utility" aria-label="Account">
+      <ul><li><a href="#account">Luke P.</a></li></ul>
+    </nav>
+  </header>
+  <div class="page single">
+    <main id="main">
+      <h1 id="page-heading" tabindex="-1">My tee times</h1>
+      <p>Both courses, one list. Right now is Fri, Nov 6 at 9:30 AM.</p>
+      <section aria-labelledby="upcoming-heading">
+        <h2 id="upcoming-heading">Upcoming</h2>
+        <ul class="tees" style="grid-template-columns:minmax(0,1fr)">
+          <li class="box trip">
+            <div>
+              <h3>Davis Park, today at 11:00 AM</h3>
+              <p class="hint">1 player, 9 holes, walking. Paid $18.00. Confirmation DP-30577.</p>
+              <p><strong>If you cancel now:</strong> a rain check for $18.00, no refund.</p>
+            </div>
+            <a class="btn" href="07-cancel.html" aria-label="Cancel Davis Park, today at 11:00 AM">Cancel</a>
+          </li>
+          <li class="box trip">
+            <div>
+              <h3>Valley View, Sat, Nov 7 at 10:20 AM</h3>
+              <p class="hint">2 players, 18 holes, cart. Paid $104.00. Confirmation VV-48213.</p>
+              <p><strong>If you cancel now:</strong> a full refund. That ends Fri at 10:20 PM.</p>
+            </div>
+            <a class="btn" href="#cancel-vv" aria-label="Cancel Valley View, Saturday, November 7 at 10:20 AM">Cancel</a>
+          </li>
+        </ul>
+      </section>
+      <button type="button" class="btn" aria-expanded="false" aria-controls="past">Past tee times (3)</button>
+      <div id="past" hidden></div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p>Wireframe for CS 3650 Phase 2, with sample tee times. Not affiliated with Davis County or ForeUp.</p>
+  </footer>
+</body>
+</html>

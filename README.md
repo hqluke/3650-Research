@@ -11,6 +11,7 @@ This repo is the documentation trail for my CS 3650 research project. It has my 
 | `reference/` | Study sheets on the methods and standards I'm auditing against |
 | `phase-1/` | Phase 1: Contextual Research & Diagnostic Usability Audit (due Oct 9, 2026) |
 | `experiment_design/` | Lab 04: Experiment Design & Variable Formulation Plan (due Nov 6, 2026) |
+| `IA_Mapping/` | Phase 2: Information Design & IA Mapping (due Nov 6, 2026) |
 
 Inside `phase-1/`:
 
@@ -36,4 +37,18 @@ Inside `experiment_design/`:
 | `Lab04_Experiment_Plan.pdf` | The plan I submit, built from the markdown with `build_pdf.py` |
 | `data_dictionary.csv` | Every variable in the study, its type, allowed values, and how it's measured |
 | `session_sheet.csv` | Blank data collection sheet, one row per participant per task |
+| `build_pdf.py` | Same accessible PDF build as Phase 1. Needs `pip install markdown pikepdf` and Chrome |
+
+Inside `IA_Mapping/`:
+
+| Path | What's in it |
+| --- | --- |
+| `card-sort/protocol.md` | How I ran the open card sort in Trello, and the 18 cards |
+| `card-sort/raw/` | Board screenshots for C1-C3 (the raw data, since the Trello export failed), session notes, and `card_sort_raw.csv` transcribed from them |
+| `card-sort/similarity.py` | Builds `similarity_matrix.csv`, `.svg`, and `.png` from the raw CSV |
+| `diagrams/` | Sitemap and the booking and cancel flows as Mermaid source, with SVG and PNG exports |
+| `wireframes/` | Nine grayscale HTML wireframes. Add `?annotate` to the URL to draw landmarks, live regions, ARIA states, and Tab order |
+| `wireframes/exports/` | Desktop, phone, and annotated screenshots, made with `capture.sh` |
+| `Phase2_IA_Blueprint.md` | Source for the report |
+| `Phase2_IA_Blueprint.pdf` | The report I submit, built from the markdown with `build_pdf.py` |
 | `build_pdf.py` | Same accessible PDF build as Phase 1. Needs `pip install markdown pikepdf` and Chrome |
